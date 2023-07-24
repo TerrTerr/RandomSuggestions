@@ -22,14 +22,14 @@ h1 {
     text-shadow: 2px 2px 4px #000000;
 }
 
-#generateButton, #locationButton {
+#generateButton, #locationButton, #relationshipButton {
     font-size: 20px;
     padding: 10px 20px;
     margin-top: 20px;
     color: white;
     border: none;
     border-radius: 5px;
-    box-shadow: 0px 10px 30px -5px rgba(255, 0, 0, 0.5);
+    box-shadow: 0px 10px 30px -5px rgba(0, 255, 0, 0.5);
     transition: all 0.3s ease;
     cursor: pointer;
     animation: glow 2s infinite;
@@ -45,6 +45,11 @@ h1 {
     animation-name: glow-purple;
 }
 
+#relationshipButton {
+    background: #008000;
+    animation-name: glow-green;
+}
+
 @keyframes glow-red {
     0% { box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000; }
     100% { box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
@@ -55,14 +60,29 @@ h1 {
     100% { box-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080, 0 0 40px #800080; }
 }
 
-#generateButton:hover, #locationButton:hover {
+@keyframes glow-green {
+    0% { box-shadow: 0 0 5px #008000, 0 0 10px #008000, 0 0 15px #008000, 0 0 20px #008000; }
+    100% { box-shadow: 0 0 10px #008000, 0 0 20px #008000, 0 0 30px #008000, 0 0 40px #008000; }
+}
+
+#generateButton:hover, #locationButton:hover, #relationshipButton:hover {
     box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.5);
 }
 
-#suggestion, #location {
+#suggestion, #location, #relationship {
     font-size: 40px;
     font-weight: bold;
     color: #ff0000;
     margin-top: 20px;
     text-shadow: 2px 2px 4px #000000;
+}
+
+.relationship-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggle-container {
+    margin-top: 10px;
 }
