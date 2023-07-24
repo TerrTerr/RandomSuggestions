@@ -22,11 +22,10 @@ h1 {
     text-shadow: 2px 2px 4px #000000;
 }
 
-#generateButton {
+#generateButton, #locationButton {
     font-size: 20px;
     padding: 10px 20px;
     margin-top: 20px;
-    background: #ff0000;
     color: white;
     border: none;
     border-radius: 5px;
@@ -36,17 +35,31 @@ h1 {
     animation: glow 2s infinite;
 }
 
-@keyframes glow {
+#generateButton {
+    background: #ff0000;
+    animation-name: glow-red;
+}
+
+#locationButton {
+    background: #800080;
+    animation-name: glow-purple;
+}
+
+@keyframes glow-red {
     0% { box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000, 0 0 20px #ff0000; }
     100% { box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000; }
 }
 
-#generateButton:hover {
-    background: #ff0000;
+@keyframes glow-purple {
+    0% { box-shadow: 0 0 5px #800080, 0 0 10px #800080, 0 0 15px #800080, 0 0 20px #800080; }
+    100% { box-shadow: 0 0 10px #800080, 0 0 20px #800080, 0 0 30px #800080, 0 0 40px #800080; }
+}
+
+#generateButton:hover, #locationButton:hover {
     box-shadow: 0px 10px 30px -5px rgba(255, 255, 255, 0.5);
 }
 
-#suggestion {
+#suggestion, #location {
     font-size: 40px;
     font-weight: bold;
     color: #ff0000;
