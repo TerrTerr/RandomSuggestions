@@ -1,17 +1,37 @@
 body {
     background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Use a custom font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #36d1dc, #5b86e5); /* Add a gradient background */
 }
 
 .container {
     text-align: center;
-    padding-top: 20%;
+    padding: 2em;
+    background: white;
+    border-radius: 8px; /* Round the corners */
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1); /* Add a box shadow */
 }
 
 #generateButton {
     font-size: 20px;
     padding: 10px 20px;
     margin-top: 20px;
+    background: #5b86e5;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Round the corners */
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+    transition: all 0.3s ease; /* Add a transition */
+}
+
+#generateButton:hover {
+    background: #36d1dc;
+    cursor: pointer;
 }
 
 #suggestion {
